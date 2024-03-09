@@ -1,0 +1,238 @@
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-color: #e9c190;
+}
+
+.snoopy {
+	position: relative;
+	width: 180px;
+	bottom: 90px;
+}
+
+.birthdayCard {
+	position: relative;
+	width: 437.5px; /* 250px * 1.75 */
+	height: 612.5px; /* 350px * 1.75 */
+	cursor: pointer;
+	transform-style: preserve-3d;
+	transform: perspective(4375px); /* 2500px * 1.75 */
+	transition: 1s;
+}
+
+.birthdayCard:hover {
+	transform: perspective(4375px) rotate(3deg); /* 2500px * 1.75 */
+	box-shadow: inset 90px 20px 90px rgba(0, 0, 0, 0.2),
+		25px 0 40px rgba(0, 0, 0, 0.4);
+}
+
+.birthdayCard:hover .cardFront {
+	transform: rotateY(-160deg);
+}
+
+.happy,
+.rainbow2 {
+	transition: opacity 0.2s ease-out; /* Add transition */
+	opacity: 1; /* Initially set opacity to 1 */
+}
+
+.birthdayCard:hover .happy,
+.birthdayCard:hover .rainbow2 {
+	opacity: 0; /* Set opacity to 0 when hovered */
+}
+
+.birthdayCard:hover .cake {
+	visibility: visible;
+	opacity: 1;
+}
+
+.cardFront {
+	position: relative;
+	background: #fff7ee;
+	width: 437.5px; /* 250px * 1.75 */
+	height: 612.5px; /* 350px * 1.75 */
+	overflow: hidden;
+	transform-origin: left;
+	box-shadow: inset 90px 20px 90px rgba(0, 0, 0, 0.2),
+		25px 0 40px rgba(0, 0, 0, 0.4);
+	transition: 0.6s;
+}
+
+.happy {
+	font-family: "Titan One", sans-serif;
+	color: #6d4237;
+	text-align: center;
+	font-size: 38.5px; /* 22px * 1.75 */
+	margin: 42px; /* 24px * 1.75 */
+	transition: 0.1s;
+	backface-visibility: visible;
+}
+
+.rainbow2 {
+	position: absolute;
+	width: 105px; /* 60px * 1.75 */
+	rotate: -20deg;
+	right: 105px; /* 60px * 1.75 */
+	top: 143.5px; /* 82px * 1.75 */
+	visibility: visible;
+}
+
+.cake {
+	position: absolute;
+	width: 332.5px; /* 190px * 1.75 */
+	top: -17.5px; /* -10px * 1.75 */
+	right: 8.75px; /* 5px * 1.75 */
+	rotate: 17.5deg; /* 10deg * 1.75 */
+	visibility: hidden;
+	transition: visibility 0s, opacity 0.6s linear; /* Add transition */
+	opacity: 0;
+}
+
+.balloons {
+	position: absolute;
+}
+
+.balloonOne,
+.balloonTwo,
+.balloonThree {
+	position: absolute;
+	width: 148.75px; /* 85px * 1.75 */
+	height: 166.25px; /* 95px * 1.75 */
+	border-radius: 50%;
+}
+
+.balloonOne:before,
+.balloonTwo:before,
+.balloonThree:before {
+	content: "";
+	position: absolute;
+	width: 1.75px; /* 1px * 1.75 */
+	height: 271.25px; /* 155px * 1.75 */
+	background-color: #ffd166;
+	top: 166.25px; /* 95px * 1.75 */
+	left: 75.25px; /* 43px * 1.75 */
+}
+
+.balloonOne:after,
+.balloonTwo:after,
+.balloonThree:after {
+	content: "";
+	position: absolute;
+	border-right: 12.25px solid transparent; /* 7px * 1.75 */
+	border-left: 12.25px solid transparent; /* 7px * 1.75 */
+	top: 165.5px; /* 94px * 1.75 */
+	left: 64.75px; /* 37px * 1.75 */
+}
+
+.balloonOne:after {
+	border-bottom: 17.5px solid #ef476f; /* 10px * 1.75 */
+}
+
+.balloonTwo:after {
+	border-bottom: 17.5px solid #06d6a0; /* 10px * 1.75 */
+}
+
+.balloonThree:after {
+	border-bottom: 17.5px solid #ffd166; /* 10px * 1.75 */
+}
+
+.balloonOne {
+	background-color: rgba(239, 71, 111, 0.7);
+	left: -17.5px; /* -10px * 1.75 */
+	top: 87.5px; /* 50px * 1.75 */
+}
+
+.balloonTwo {
+	background-color: rgba(6, 214, 160, 0.7);
+	left: 87.5px; /* 50px * 1.75 */
+	top: 35px; /* 20px * 1.75 */
+}
+
+.balloonThree {
+	background-color: rgba(255, 209, 102, 0.7);
+	left: 17.5px; /* 10px * 1.75 */
+	top: -35px; /* -20px * 1.75 */
+}
+
+.smile {
+	position: absolute;
+	width: 87.5px; /* 50px * 1.75 */
+	right: 52.5px; /* 30px * 1.75 */
+	top: 192.5px; /* 110px * 1.75 */
+	rotate: 26.25deg; /* 15deg * 1.75 */
+}
+.flower {
+	position: absolute;
+	width: 87.5px; /* 50px * 1.75 */
+	left: 17.5px; /* 10px * 1.75 */
+	bottom: 35px; /* 20px * 1.75 */
+}
+
+.rainbow {
+	position: absolute;
+	width: 105px; /* 60px * 1.75 */
+	rotate: -10deg;
+	right: 17.5px; /* 10px * 1.75 */
+	bottom: 35px; /* 20px * 1.75 */
+}
+
+.dog {
+	position: absolute;
+	width: 210px; /* 120px * 1.75 */
+	left: 113.75px; /* 65px * 1.75 */
+	bottom: 35px; /* 20px * 1.75 */
+}
+
+.muayliie {
+	position: absolute;
+	z-index: 1;
+	width: 297.5px; /* 170px * 1.75 */
+	left: 140px; /* 80px * 1.75 */
+	top: 17.5px; /* 10px * 1.75 */
+}
+
+.cardInside {
+	position: absolute;
+	background-color: #fff7ee;
+	width: 437.5px; /* 250px * 1.75 */
+	height: 612.5px; /* 350px * 1.75 */
+	z-index: -1;
+	left: 0;
+	top: 0;
+	box-shadow: inset 90px 20px 90px rgba(0, 0, 0, 0.2);
+}
+
+p {
+	font-family: "Itim", cursive;
+	margin: 35px; /* 20px * 1.75 */
+	font-size: 24.5px; /* 14px * 1.75 */
+	color: #333;
+}
+
+.text-body {
+	font-size: 21px; /* 12.5px * 1.75 */
+	text-indent: 35px; /* 20px * 1.75 */
+}
+
+.name {
+	position: absolute;
+	left: 253.75px; /* 145px * 1.75 */
+	top: 395px; /* 215px * 1.75 */
+	font-size: 24.5px; /* 14px * 1.75 */
+	color: #333;
+}
+
+.back {
+	font-family: "Titan One", sans-serif;
+	color: #6d4237;
+	text-align: center;
+	font-size: 38.5px; /* 22px * 1.75 */
+	margin: 42px; /* 24px * 1.75 */
+}
+
+.ready {
+	font-family: "Titan One", sans-serif;
+	color: #000000;
+}
