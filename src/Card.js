@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
 
-import muayliie_img from "./res/muayliie.png";
+import person from "./res/person.png";
 import cake from "./res/cake.png";
 import flower from "./res/flower.png";
 import rainbow from "./res/rainbow.png";
@@ -23,7 +23,7 @@ const BirthdayCard = () => {
 				<img src={rainbow2} alt="rainbow2" className="rainbow2" />
 				<img src={cake} alt="cake" className="cake" />
 				<div className="balloons">
-					<img src={muayliie_img} alt="Muayliie" className="muayliie" />
+					<img src={person} alt="Picture" className="person" />
 					<div className="balloonThree" />
 					<div className="balloonTwo" />
 					<div className="balloonOne" />
@@ -31,15 +31,14 @@ const BirthdayCard = () => {
 			</div>
 			<div className="cardInside">
 				<h3 className="back">HAPPY BIRTHDAY ❤️❤️❤️</h3>
-				<p>ถึง มุอ้น 🐷 ,</p>
+				<p>To Receiver 🐷 ,</p>
 				<p className="text-body">
-					สุขสันต์วันเกิดน้า อายุครบ 22 ขวบแย้ว ขอให้มุอ้นมีความสุขมาก ๆ
-					ขอให้มุอ้นสมหวังในทุกสิ่ง ขอให้มุอ้นได้ลองทำอะไรใหม่ ๆ
-					ขอให้มุอ้นสุขภาพแข็งแรง เติบโตไปเป็นเด็กอ้นที่น่ายัก มะต้องเครียดเย้อ
-					ใช้ชีวิตให้มีความสุข เค้าจะอยู่ข้างมุอ้นเสมอ ขอให้มุอ้นมีความสุขกับวัย
-					22 น้า 🫶 🥰 😘
+					Happy Birthday! 🎉 Wishing you a day filled with joy, laughter, and
+					all the things that make you smile. May this year bring you endless
+					happiness and unforgettable memories. Cheers to another amazing trip
+					around the sun! 🎂🎈🎊
 				</p>
-				<p className="name">หมาอ้น 🐶</p>
+				<p className="name">Sender 🐶</p>
 				<img src={smile} alt="smile" className="smile" />
 				<img src={flower} alt="flower" className="flower" />
 				<img src={rainbow} alt="rainbow" className="rainbow" />
